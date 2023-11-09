@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Homepage</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{#if isAuthenticated}}
+        <p>Hello, {{username}}! You are logged in.</p>
+        <a href="/logout">Logout</a>
+        {{else}}
+        <p>Explore our blog posts. Please log in or sign up to interact.</p>
+        <a href="/login">Login</a> | <a href="/signup">Sign Up</a>
+        {{/if}}
+
+        {{#if blogPosts.length}}
+        <h2>Recent Blog Posts</h2>
+        <ul>
+            {{#each blogPosts}}
+            <li>
+                <h3>{{title}}</h3>
+                <p>{{content}}</p>
+                <p>Published on {{createdAt}}</p>
+            </li>
+            {{/each}}
+        </ul>
+        {{else}}
+        <p>No blog posts available.</p>
+        {{/if}}
+    </main>
+
+    <footer>
+    </footer>
+
+</body>
+
+</html>

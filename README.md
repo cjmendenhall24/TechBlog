@@ -1,1 +1,3 @@
-# TechBlog
+This is my attempt at making a Tech Blog.
+I followed the MVC format for folder layout. I confgured a connection to the mysql database. I set up the shchema for the database. I setup the models for Users, their projects, and comments. I setup the root level server.js file. For guidance, I looked at old activities we've gone over, asked chatGPT, and at the end of a tutor session discussed it briefly.
+Charles Mendenhall
